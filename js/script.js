@@ -134,8 +134,8 @@ function preload() {
     // Load the JSON file and assign the result to the 'gameData' variable
     gameData = loadJSON("js/gameObjects.json");
 
-    ace.image = loadImage("/assets/images/aceofhearts.PNG");
-    BlackCat.body.image = loadImage("/assets/images/BlackCat.png");
+    ace.image = loadImage("assets/images/aceofhearts.PNG");
+    BlackCat.body.image = loadImage("assets/images/BlackCat.png");
     music = loadSound("assets/sounds/music.mp3");
     pixelFont = loadFont("assets/Jacquard_24/Jacquard24-Regular.ttf");
     
