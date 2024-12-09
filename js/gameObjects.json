@@ -1,0 +1,93 @@
+{ "objects": [
+    {
+        "name": "ladybug",
+        "image": "../assets/images/LadyBug.png",
+        "lucky": true,
+        "x": 0,
+        "y": 200,
+        "size": 100,
+        "speed": 4
+    },
+    {
+        "name": "itchyfoot",
+        "image": "../assets/images/FootItch.png",
+        "lucky": false,
+        "x": -100,
+        "y": 300,
+        "size": 100,
+        "speed": 3
+    },
+    {
+        "name": "fish",
+        "image": "../assets/images/Fish.png",
+        "lucky": true,
+        "x": -20,
+        "y": 200,
+        "size": 120,
+        "speed": 4
+    },
+    {
+        "name": "rice",
+        "image": "../assets/images/ChopsticksRice.png",
+        "lucky": false,
+        "x": -50,
+        "y": 100,
+        "size": 100,
+        "speed": 3
+    },
+    {
+        "name": "wheel",
+        "image": "../assets/images/FortuneWheel.png",
+        "lucky": true,
+        "x": -40,
+        "y": 50,
+        "size": 100,
+        "speed": 4
+    },
+    {
+        "name": "owl",
+        "image": "../assets/images/Owl.png",
+        "lucky": false,
+        "x": -80,
+        "y": 150,
+        "size": 100,
+        "speed": 3
+    },
+    {
+        "name": "clover",
+        "image": "../assets/images/FourLeaf.png",
+        "lucky": true,
+        "x": -70,
+        "y": 170,
+        "size": 100,
+        "speed": 4
+    },
+    {
+        "name": "mirror",
+        "image": "../assets/images/Mirror.png",
+        "lucky": false,
+        "x": -79,
+        "y": 60,
+        "size": 100,
+        "speed": 3
+    },
+    {
+        "name": "horseshoeup",
+        "image": "../assets/images/HorseShoe.png",
+        "lucky": true,
+        "x": -59,
+        "y": 60,
+        "size": 100,
+        "speed": 3
+    },
+    {
+        "name": "horseshoedown",
+        "image": "../assets/images/HorseShoeDown.png",
+        "lucky": false,
+        "x": -59,
+        "y": 60,
+        "size": 100,
+        "speed": 3
+    }
+     ]
+}
