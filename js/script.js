@@ -236,13 +236,6 @@ function moveSymbols() {
     angle += 0.1;
 }
 
-if (isNaN(newX) || isNaN(newY)) {
-  console.error(`Invalid position: (${newX}, ${newY})`);
-} else {
-  object.x = newX;
-  object.y = newY;
-}
-
 // Function to reset positions of symbols when they move off-screen or collide
 function resetSymbols() {
     gameObjects.forEach(obj => {
