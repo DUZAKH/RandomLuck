@@ -325,11 +325,11 @@ function displayStartScreen() {
     textSize(16);
     textAlign(CENTER);
     fill(0); // Black 
-    text("You will lose you 9 Ace of Hearts, Black Cat can help you live...", width / 2, height / 2.5);
-    text("Many cultures have tried to crack the code into your random existence,", width / 2, height / 2.3);
-    text("mortality, and chance.", width / 2, height / 2.1);
+    text("see what rewards befall you...", width / 2, height / 2.5);
+    text("your luck is being tested all the time,", width / 2, height / 2.3);
+    text("everthing is chance.", width / 2, height / 2.1);
     text("In much of the ancient world, humans attempted to decode divine messages:", width / 2, height / 1.9);
-    text("omens. See how long your ace of hearts can survive when introduced to these omens!", width / 2, height / 1.8);
+    text("omens. See how long your ace of hearts can survive!", width / 2, height / 1.8);
 
     // Start the game
     textSize(20);
