@@ -1,7 +1,7 @@
 { "objects": [
     {
         "name": "ladybug",
-        "image": "/assets/images/LadyBug.png",
+        "image": "RandomLuck/assets/images/LadyBug.png",
         "lucky": true,
         "x": 0,
         "y": 200,
@@ -10,7 +10,7 @@
     },
     {
         "name": "itchyfoot",
-        "image": "/assets/images/FootItch.png",
+        "image": "RandomLuck/assets/images/FootItch.png",
         "lucky": false,
         "x": -100,
         "y": 300,
@@ -19,7 +19,7 @@
     },
     {
         "name": "fish",
-        "image": "/assets/images/Fish.png",
+        "image": "RandomLuck/assets/images/Fish.png",
         "lucky": true,
         "x": -20,
         "y": 200,
@@ -28,7 +28,7 @@
     },
     {
         "name": "rice",
-        "image": "/assets/images/ChopsticksRice.png",
+        "image": "RandomLuck/assets/images/ChopsticksRice.png",
         "lucky": false,
         "x": -50,
         "y": 100,
@@ -37,7 +37,7 @@
     },
     {
         "name": "wheel",
-        "image": "/assets/images/FortuneWheel.png",
+        "image": "RandomLuck/assets/images/FortuneWheel.png",
         "lucky": true,
         "x": -40,
         "y": 50,
@@ -46,7 +46,7 @@
     },
     {
         "name": "owl",
-        "image": "/assets/images/Owl.png",
+        "image": "RandomLuck/assets/images/Owl.png",
         "lucky": false,
         "x": -80,
         "y": 150,
@@ -55,7 +55,7 @@
     },
     {
         "name": "clover",
-        "image": "/assets/images/FourLeaf.png",
+        "image": "RandomLuck/assets/images/FourLeaf.png",
         "lucky": true,
         "x": -70,
         "y": 170,
@@ -64,7 +64,7 @@
     },
     {
         "name": "mirror",
-        "image": "/assets/images/Mirror.png",
+        "image": "RandomLuck/assets/images/Mirror.png",
         "lucky": false,
         "x": -79,
         "y": 60,
@@ -73,7 +73,7 @@
     },
     {
         "name": "horseshoeup",
-        "image": "/assets/images/HorseShoe.png",
+        "image": "RandomLuck/assets/images/HorseShoe.png",
         "lucky": true,
         "x": -59,
         "y": 60,
@@ -82,7 +82,7 @@
     },
     {
         "name": "horseshoedown",
-        "image": "/assets/images/HorseShoeDown.png",
+        "image": "RandomLuck/assets/images/HorseShoeDown.png",
         "lucky": false,
         "x": -59,
         "y": 60,
