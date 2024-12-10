@@ -128,9 +128,9 @@ let bounceDirection = 1;
 
 // Preloads all the images and music
 function preload() {
-    // Load the JSON file and assign the result to 'gameData'
+    // Load the JSON file and assign the result to 'gameData' variable
     // unfortunately i think this is the overall issue, my friend says that it has to do with p5's asynchronous loading
-    gameData = loadJSON("https://github.com/DUZAKH/RandomLuck/blob/831f97498f9c87b77dc4044ec5b84bfaabf5f837/js/gameObjects.json");
+    gameData = loadJSON("js/gameObjects.json");
     //the image of the heart
     ace.image = loadImage("https://duzakh.github.io/cart253/mod-jam/assets/images/aceofhearts.PNG");
     //black cat's image
