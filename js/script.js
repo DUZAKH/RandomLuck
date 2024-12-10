@@ -1,18 +1,16 @@
 /**
- * 9Luck
+ * RandomLuck
  * Kiana Rezaee
  * 
- * You will die regardless of what you do, but is there larger meaning in this death?
- * In you?
- * In your surroundings?
- * Play to find out how it all ends..
+ * You are a being rules by things beyond your understanding, even randomness itself is a subject humans can't grasp...
+ * Your prespective affects everything around you
+ * But js promises randomness! use RandomLuck to find out what you can achieve based on luck alone...
  * 
  * Instructions:
  * - Black Cat will be following your mouse
  * - Catch lucky items to survive longer 
  * - If you catch unlucky items, you will lose your 9 lucky hearts
- * - If you do not catch them they will collide with the wall and make you lose lives anyways...
- * - random rewards will be given to you throughout your play
+ * - Random rewards will be given to you throughout your play
  * - act quickly and see how long you last!
  *
  *
@@ -130,6 +128,7 @@ let bounceDirection = 1;
 function preload() {
     // Load the JSON file and assign the result to 'gameData' variable
     // unfortunately i think this is the overall issue, my friend says that it has to do with p5's asynchronous loading
+    //in the console, the only thing that comes back when trying to find the coordinates of objects is NaN, NaN 
     gameData = loadJSON("js/gameObjects.json");
     //the image of the heart
     ace.image = loadImage("https://duzakh.github.io/cart253/mod-jam/assets/images/aceofhearts.PNG");
@@ -229,6 +228,7 @@ function moveSymbols() {
 
         // Adding sine-wave motion for a dynamic effect
         obj.y += 5 * sin(angle);
+        //this console log shows the primary issue the NaN...
         console.log(`Object ${obj.image} moved to (${obj.x}, ${obj.y})`); // Log object movement
     });
 
@@ -326,10 +326,10 @@ function displayStartScreen() {
     textAlign(CENTER);
     fill(0); // Black 
     text("see what rewards befall you...", width / 2, height / 2.5);
-    text("your luck is being tested all the time,", width / 2, height / 2.3);
-    text("everthing is chance.", width / 2, height / 2.1);
+    text("your luck is being tested all the time in real life,", width / 2, height / 2.3);
+    text("everthing around you is chance.", width / 2, height / 2.1);
     text("In much of the ancient world, humans attempted to decode divine messages:", width / 2, height / 1.9);
-    text("omens. See how long your ace of hearts can survive!", width / 2, height / 1.8);
+    text("omens. See how long your ace of hearts can survive and what luck you carry!", width / 2, height / 1.8);
 
     // Start the game
     textSize(20);
@@ -355,7 +355,6 @@ function displayDeathScreen() {
     text(deathMessage, width / 2, height / 2);
 
     //displays the seconds you played
-
     //floor converts the calculated number into 
     text(floor(timer.counter/60) + " seconds", 100, 50);
 }
