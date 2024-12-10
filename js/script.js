@@ -142,7 +142,6 @@ function preload() {
     console.log("Game data loaded:", gameData);
 }
 
-// Canvas and background setup
 function setup() {
     //function to see if its working in setup
     console.log(gameData.objects);
@@ -159,13 +158,13 @@ function setup() {
     });
 
     createCanvas(640, 480);
-    background("#AEF359"); // bright green
+    background("0, 179, 179"); // blue
 }
 
 //draw function and general game if statements 
 function draw() {
     // Background is in every frame so that the animation of the cat bouncing doesn't mess it up, it looked messed up at first because i didnt put this...
-    background("#AEF359"); 
+    background("0, 179, 179"); 
 
     if (gameState === "start") {
         // when the player starts the game, the display screen is shown this function is defined later
@@ -345,7 +344,7 @@ function gameOver() {
 //main function for the ending screen 
 
 function displayDeathScreen() {
-    background("#AEF359");  
+    background("0, 179, 179");  
     textSize(24);
     fill(0);  
     textAlign(CENTER,CENTER);
