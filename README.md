@@ -1,8 +1,8 @@
-# 9Luck
+# RandomLuck
 
 mini project about black cats and luck...
 
-This game conceptually focuses on the perception of chance, there is no merit or end to this work.
+This game conceptually focuses on the perception of chance, randomness, and the concept of merit and ending (neverending?).
 
 [Play it!](https://duzakh.github.io/RandomLuck)
 
