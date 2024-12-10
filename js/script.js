@@ -59,7 +59,6 @@ let pixelFont;
 let music = undefined;
 
 //ending messages are undefined at first
-
 let deathMessage = undefined;
 
 //same with reward messages
@@ -67,7 +66,6 @@ let rewardMessage = undefined;
 
 // My objects which the black cat interacts with are located in the json file where they are in an array 
 //they each have an image, position, size, and speed
-
 let gameObjects = [];
 
 
@@ -94,7 +92,6 @@ let angle= 0;
 // my attempt at an array
 // these are potential end messages which are randomly displayed 
 // they correspond with the luckiness of each symbol to give viewers some hints
-
 const endMessages = [
     "BlackCat Says: Your itchy foot foresaw your violent death...\nyou were attacked in the back of an alleyway.",
     "BlackCat Says: You stuck your chopsticks in rice inviting an early death... \nyou choked on your food and perished.",
@@ -108,6 +105,7 @@ const endMessages = [
     "BlackCat Says: The wheel ensured your fortune and joy;\n what an adventurous life!"
 ];
 
+//the random rewards will give one of these messages and do the following
 const rewardMessages = [
   { message: "Nineteen extra hearts for you, a fortunate reward by the Gods!", aceCounter: 19 },
   { message: "Nineteen extra hearts… how long will this misery go on!", aceCounter: 19 },
@@ -129,21 +127,25 @@ let bounceY = 0;
 let bounceDirection = 1; 
 
 // Preloads all the images and music
-// Preloads all the images and music
 function preload() {
-    // Load the JSON file and assign the result to the 'gameData' variable
-    gameData = loadJSON("js/gameObjects.json");
-
-    ace.image = loadImage("assets/images/aceofhearts.PNG");
-    BlackCat.body.image = loadImage("assets/images/BlackCat.png");
-    music = loadSound("assets/sounds/music.mp3");
-    pixelFont = loadFont("assets/Jacquard_24/Jacquard24-Regular.ttf");
-    
+    // Load the JSON file and assign the result to 'gameData'
+    // unfortunately i think this is the overall issue, my friend says that it has to do with p5's asynchronous loading
+    gameData = loadJSON("https://github.com/DUZAKH/RandomLuck/blob/831f97498f9c87b77dc4044ec5b84bfaabf5f837/js/gameObjects.json");
+    //the image of the heart
+    ace.image = loadImage("https://duzakh.github.io/cart253/mod-jam/assets/images/aceofhearts.PNG");
+    //black cat's image
+    BlackCat.body.image = loadImage("https://duzakh.github.io/cart253/mod-jam/assets/images/BlackCat.png");
+    /the music
+    music = loadSound("https://duzakh.github.io/cart253/mod-jam/assets/sounds/music.mp3");
+    // the font
+    pixelFont = loadFont("https://duzakh.github.io/cart253/mod-jam/assets/Jacquard_24/Jacquard24-Regular.ttf");
+    //console to check if the issue is the gamedata or not
     console.log("Game data loaded:", gameData);
 }
 
 // Canvas and background setup
 function setup() {
+    //function to see if its working in setup
     console.log(gameData.objects);
     // Loop through the 'objects' array in the loaded data
     gameData.objects.forEach((obj) => {
@@ -152,6 +154,7 @@ function setup() {
             ...obj,
             image: loadImage(obj.image),
         };
+        //console to see if the issue is newobject loop
         console.log(newObject);
         gameObjects.push(newObject);
     });
@@ -170,38 +173,35 @@ function draw() {
         displayStartScreen();
         // the bouncing cat animation function starts too, this continues throughout thte rest of the game also defined later
         animateCat(); 
-    } else if (gameState=== "game"){
-        moveCat(); 
+    } else if (gameState === "game") {
+        //moves the cat
+        moveCat();
         // this makes the cat moves with the mouse
-        // I might want to map this later
-        // need help doesnt work how I want
-        BlackCat.body.x = mouseX; 
-        // position of the paw relative to the cat, its shifted slightly to the left
-        BlackCat.paw.x = BlackCat.body.x - 40; 
-
-        // Draws the ace heart 
-        drawLives();
+        BlackCat.body.x = mouseX;
         
+        // position of the paw relative to the cat, its shifted slightly to the left
+        BlackCat.paw.x = BlackCat.body.x - 40;
+
+        // Draws the ace heart
+        drawLives();
+
         // draws the counter
         displayCounter();
 
         // Draws the paw
-        drawPaw(); 
-
-        timer.counter ++; 
+        drawPaw();
         
-        //the name symbol is just a way to make sure i dont have to write 10 codes for them and can organize all the objects into these functions instead
-        //if I was good at arrays Id have a symbol array instead and use randoms but I struggled with the ending screen 
+        //adds to the timer
+        timer.counter++;
+        
         //moves all the objects whose images were described in preload
-        gameObjects.forEach(moveSymbols);
-        
+        moveSymbols();
+
         // draws all the objects whose images were described in preload
-        gameObjects.forEach(drawSymbols);
+        drawSymbols();
 
         // Checks for collisions between the paw and objects
-        gameObjects.forEach(checkCollisions);
-    }
-
+        checkCollisions();}
     else if (gameState ==="end") {
         displayDeathScreen();
         }
