@@ -135,7 +135,7 @@ function preload() {
     ace.image = loadImage("https://duzakh.github.io/cart253/mod-jam/assets/images/aceofhearts.PNG");
     //black cat's image
     BlackCat.body.image = loadImage("https://duzakh.github.io/cart253/mod-jam/assets/images/BlackCat.png");
-    /the music
+    //the music
     music = loadSound("https://duzakh.github.io/cart253/mod-jam/assets/sounds/music.mp3");
     // the font
     pixelFont = loadFont("https://duzakh.github.io/cart253/mod-jam/assets/Jacquard_24/Jacquard24-Regular.ttf");
