@@ -158,13 +158,13 @@ function setup() {
     });
 
     createCanvas(640, 480);
-    background("0, 179, 179"); // blue
+    background("#00b3b3"); // blue
 }
 
 //draw function and general game if statements 
 function draw() {
     // Background is in every frame so that the animation of the cat bouncing doesn't mess it up, it looked messed up at first because i didnt put this...
-    background("0, 179, 179"); 
+    background("#00b3b3"); 
 
     if (gameState === "start") {
         // when the player starts the game, the display screen is shown this function is defined later
@@ -344,7 +344,7 @@ function gameOver() {
 //main function for the ending screen 
 
 function displayDeathScreen() {
-    background("0, 179, 179");  
+    background("#00b3b3");  
     textSize(24);
     fill(0);  
     textAlign(CENTER,CENTER);
